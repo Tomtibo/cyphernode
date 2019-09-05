@@ -19,6 +19,7 @@
 . ./call_lightningd.sh
 . ./ots.sh
 . ./newblock.sh
+. ./wasabi.sh
 
 main() {
   trace "Entering main()..."
@@ -459,6 +460,10 @@ main() {
           ;;
         wasabi_newaddr)
           # queries random instance for a new bech32 address
+          # POST http://192.168.111.152:8080/wasabi_newaddr
+          # BODY {"label":"Pay #12 for 2018"}
+          response=$(wasabi_newaddr "${line}")
+          response_to_client "${response}" ${?}
           break
           ;;
         wasabi_get_balance)
