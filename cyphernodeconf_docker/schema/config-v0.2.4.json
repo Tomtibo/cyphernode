@@ -142,7 +142,8 @@
       },
       "then": {
         "required": [
-          "elements_datapath"
+          "elements_datapath",
+          "elements_expose"
         ]
       }
     },
@@ -567,6 +568,15 @@
       "$id": "#/properties/lightning_expose",
       "type": "boolean",
       "title": "Expose lightning node",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "elements_expose": {
+      "$id": "#/properties/elements_expose",
+      "type": "boolean",
+      "title": "Expose elements node",
       "default": false,
       "examples": [
         false
