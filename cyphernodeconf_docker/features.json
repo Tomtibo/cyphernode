@@ -10,5 +10,9 @@
   {
     "name": "Opentimestamps client",
     "value": "otsclient"
+  },
+  {
+    "name": "Elements node",
+    "value": "elements"
   }
 ]
